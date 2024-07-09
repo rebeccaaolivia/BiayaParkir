@@ -10,5 +10,5 @@ Sistem ini dirancang untuk menghitung biaya parkir secara otomatis berdasarkan w
 Sistem ini dirancang menggunakan flowchart untuk menggambarkan proses perhitungan biaya parkir secara detail.
 
 # Dokumentasi
-Dokumentasi lengkap mengenai sistem ini, termasuk flowchart dan panduan penggunaan, dapat diakses di [[Park Project]](https://github.com/rebeccaaolivia/BiayaParkir/tree/main/Park%20Project).
+Dokumentasi lengkap mengenai sistem ini, termasuk flowchart dapat diakses di [[Park Project]](https://github.com/rebeccaaolivia/BiayaParkir/tree/main/Park%20Project).
 
