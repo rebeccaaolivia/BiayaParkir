@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="zyrex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-22 05:47:09 PM"/>
+        <attribute name="created" value="enlyZXg7REVTS1RPUC05MzlRUDRCOzIwMjEtMTEtMjI7MDQ6NDM6NTcgUE07Mjg4Mw=="/>
+        <attribute name="edited" value="enlyZXg7REVTS1RPUC05MzlRUDRCOzIwMjEtMTEtMjI7MDU6NDc6MDkgUE07MTsyOTkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <input variable="Nama"/>
+            <assign variable="BMotor" expression="2000"/>
+            <assign variable="BMobil" expression="5000"/>
+            <input variable="JamMasuk"/>
+            <input variable="JamKeluar"/>
+            <if expression="mobil">
+                <then>
+                    <assign variable="LamaParkirMobil" expression="JamKeluar-JamMasuk"/>
+                    <assign variable="BParkirMobil" expression="LamaParkirMobil*BMobil"/>
+                </then>
+                <else>
+                    <if expression="motor">
+                        <then>
+                            <assign variable="LamaParkirMotor" expression="JamKeluar-JamMasuk"/>
+                            <assign variable="BParkirMotor" expression="LamaParkirMotor*BMotor"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+            <output expression="LamaParkirMobil" newline="True"/>
+            <output expression="LamaParkirMotor" newline="True"/>
+            <output expression="BParkirMobil" newline="True"/>
+            <output expression="BParkirMotor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="zyrex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-22 06:07:33 PM"/>
+        <attribute name="created" value="enlyZXg7REVTS1RPUC05MzlRUDRCOzIwMjEtMTEtMjI7MDQ6NDM6NTcgUE07Mjg4Mw=="/>
+        <attribute name="edited" value="enlyZXg7REVTS1RPUC05MzlRUDRCOzIwMjEtMTEtMjI7MDU6NDc6MDkgUE07MTsyOTkz"/>
+        <attribute name="edited" value="QXN1cztMQVBUT1AtUEVJQkJISVY7MjAyMS0xMS0yMjswNjowNzozMyBQTTsxOzI4ODg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kendaraan" type="String" array="False" size=""/>
+            <declare name="BMotor, BMobil, JamMasuk, JamKeluar, LamaParkirMobil, LamaParkirMotor" type="Integer" array="False" size=""/>
+            <declare name="BParkirMobil, BParkirMotor, mobil, motor" type="Integer" array="False" size=""/>
+            <call expression="SelamatDatang"/>
+            <output expression="&quot;Masukan jenis kendaraan, motor atau mobil = &quot;" newline="False"/>
+            <input variable="kendaraan"/>
+            <assign variable="BMotor" expression="2000"/>
+            <assign variable="BMobil" expression="5000"/>
+            <output expression="&quot;Kapan Anda memasuki area parkir?&quot;" newline="False"/>
+            <input variable="JamMasuk"/>
+            <output expression="&quot;Kapan anda keluar dari area parkir?&quot;" newline="False"/>
+            <input variable="JamKeluar"/>
+            <if expression="mobil">
+                <then>
+                    <assign variable="LamaParkirMobil" expression="JamKeluar-JamMasuk"/>
+                    <assign variable="BParkirMobil" expression="LamaParkirMobil*BMobil"/>
+                    <output expression="&quot;Biaya Parkir anda adalah sebesar = Rp&quot;" newline="False"/>
+                    <output expression="BParkirMobil" newline="True"/>
+                </then>
+                <else>
+                    <if expression="motor">
+                        <then>
+                            <assign variable="LamaParkirMotor" expression="JamKeluar-JamMasuk"/>
+                            <assign variable="BParkirMotor" expression="LamaParkirMotor*BMotor"/>
+                            <output expression="&quot;Biaya parkir anda adalah sebesar = Rp&quot;" newline="False"/>
+                            <output expression="BParkirMotor" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Terima kasih, jangan lupa datang kembali&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="SelamatDatang" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama" type="String" array="False" size=""/>
+            <output expression="&quot;Masukan nama anda = &quot;" newline="False"/>
+            <input variable="nama"/>
+            <output expression="&quot;SELAMAT DATANG DI PARKIRAN KAMI&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
